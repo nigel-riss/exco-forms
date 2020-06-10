@@ -4,6 +4,9 @@ const baseWebpackConfig = require(`./webpack.base.config`);
 
 const buildWebpackConfig = merge(baseWebpackConfig,{
   mode: `production`,
+  output: {
+    publicPath: `./`,
+  },
 
   plugins: [],
 });
