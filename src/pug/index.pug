@@ -3,42 +3,42 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    //- link(rel="stylesheet", href="./style.css")
     title ЭКСКО — 
   body
     main
       form.cert-form(action="")
         header.cert-form__header
           label.cert-form__main-label Добровольная сертификация продукции
-          input.cert-form__input(type="text")
+          input.cert-form__input.cert-form__input--title(type="text")
         section.cert-form__main
           .cert-form__top
             .cert-form__number
-              label.cert-from__label №
-              input.cert-form__input(type="text")
+              label.cert-form__label №
+              input.cert-form__input.cert-form__input--inline(type="text")
             .cert-form__dates
-              label.cert-from__label Срок действия с
-              input.cert-form__input(type="text")
-              label.cert-from__label по
+              label.cert-form__label Срок действия&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;с
+              input.cert-form__input.cert-form__input--inline(type="text")
+              label.cert-form__label &nbsp;&nbsp;&nbsp;&nbsp;по
+              input.cert-form__input.cert-form__input--inline(type="text")
+          .cert-form__main-fields
+            .cert-form__fullsize
+              label.cert-form__label.cert-form__label--caps Орган по сертификации
               input.cert-form__input(type="text")
             .cert-form__fullsize
-              label.cert-from__label Орган по сертификации
+              label.cert-form__label.cert-form__label--caps Продукция
               input.cert-form__input(type="text")
             .cert-form__fullsize
-              label.cert-from__label Продукция
+              label.cert-form__label.cert-form__label--caps Соответствует требованиям нормативных документов
               input.cert-form__input(type="text")
             .cert-form__fullsize
-              label.cert-from__label Соответствует требованиям нормативных документов
+              label.cert-form__label.cert-form__label--caps Изготовитель
               input.cert-form__input(type="text")
             .cert-form__fullsize
-              label.cert-from__label Изготовитель
+              label.cert-form__label.cert-form__label--caps Сертификат выдан
               input.cert-form__input(type="text")
             .cert-form__fullsize
-              label.cert-from__label Сертификат выдан
+              label.cert-form__label.cert-form__label--caps На основании
               input.cert-form__input(type="text")
             .cert-form__fullsize
-              label.cert-from__label На основании
-              input.cert-form__input(type="text")
-            .cert-form__fullsize
-              label.cert-from__label Дополнительная информация
+              label.cert-form__label.cert-form__label--caps Дополнительная информация
               input.cert-form__input(type="text")

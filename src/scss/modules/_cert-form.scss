@@ -1,0 +1,67 @@
+.cert-form {
+  // box model
+  padding: 0.5rem;
+
+  // border
+  border: 2px solid $black;
+
+  // visual
+  opacity: 0.8;
+}
+
+.cert-form__header {
+  // box model
+  padding: 2rem;
+
+  // border
+  border: 2px solid $black;
+}
+
+.cert-form__main {
+  // box model
+  padding: 2rem;
+
+  // border
+  border: 2px solid $black;
+}
+
+.cert-form__main-label {
+  // box model
+  display: block;
+
+  // typography
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cert-form__top {
+  // box model
+  padding-top: 4rem;
+  padding-left: 19rem;
+}
+
+.cert-form__input {
+  // box model
+  display: block;
+}
+
+.cert-form__input {
+  // box model
+  width: 100%;
+}
+
+.cert-form__input--inline {
+  // box model
+  display: inline-block;
+  width: initial;
+}
+
+.cert-form__label {
+  // typography
+  font-size: 1.75rem;
+}
+
+.cert-form__label--caps {
+  // typography
+  text-transform: uppercase;
+}
