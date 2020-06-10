@@ -1,11 +1,14 @@
-const path = require('path');
-const fs = require('fs');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require(`path`);
+const fs = require(`fs`);
+const CopyWebpackPlugin = require(`copy-webpack-plugin`);
+const HtmlWebpackPlugin = require(`html-webpack-plugin`);
+const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
 
 
 const PATHS = {
-  src: path.resolve(__dirname, `../src`),
-  public: path.resolve(__dirname, `../public`),
+  src: path.join(__dirname, `../src`),
+  public: path.join(__dirname, `../public`),
+  assets: `assets/`,
 };
 
 
@@ -22,18 +25,57 @@ module.exports = {
     app: PATHS.src,
   },
   output: {
+    filename: `${PATHS.assets}js/[name].[contenthash].js`,
     path: PATHS.public,
+    publicPath: `/`,
   },
   module: {
-    rules: [{
-      test: /\.pug$/,
-      loader: `pug-loader`,
-    }]
+    rules: [
+      {
+        test: /\.js$/,
+        loader: `babel-loader`,
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.pug$/,
+        loader: `pug-loader`,
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          `style-loader`,
+          MiniCssExtractPlugin.loader,
+          {
+            loader: `css-loader`,
+            options: { sourceMap: true }
+          }, {
+            loader: `postcss-loader`,
+            options: {
+              sourceMap: true,
+              config: { path: `postcss.config.js` }
+            },
+          }, {
+            loader: `sass-loader`,
+            options: { sourceMap: true },
+          }
+        ],
+      },
+    ]
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: `${PATHS.assets}css/[name].[contenthash].css`,
+    }),
+
+    // new CopyWebpackPlugin([
+    //   { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+    //   { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+    //   { from: `${PATHS.src}/static`, to: "" }
+    // ]),
+
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
-      filename: `./${page.replace(/\.pug/, '.html')}`,
+      filename: `./${page.replace(/\.pug/, `.html`)}`,
     })),
   ],
 };

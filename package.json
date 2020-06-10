@@ -2,11 +2,15 @@
   "name": "exco-forms",
   "version": "1.0.0",
   "description": "Certificate froms for printing",
-  "main": "webpack.config.js",
+  "main": "index.js",
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --config ./build/webpack.dev.config.js",
-    "build": "webpack --mode production --config ./build/webpack.base.config.js"
+    "build": "webpack --mode production --config ./build/webpack.build.config.js"
   },
   "repository": {
     "type": "git",
@@ -19,12 +23,20 @@
   },
   "homepage": "https://github.com/nigel-riss/exco-forms#readme",
   "devDependencies": {
-    "css-loader": "^3.5.3",
+    "@babel/core": "7.10.2",
+    "@babel/preset-env": "7.10.2",
+    "autoprefixer": "9.8.0",
+    "babel-loader": "8.1.0",
+    "copy-webpack-plugin": "6.0.2",
+    "css-loader": "3.5.3",
+    "cssnano": "4.1.10",
     "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "0.9.0",
+    "postcss-loader": "3.0.0",
     "pug": "^3.0.0",
     "pug-loader": "^2.4.0",
     "sass": "^1.26.8",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "8.0.2",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
