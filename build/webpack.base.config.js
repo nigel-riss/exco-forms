@@ -1,5 +1,6 @@
 const path = require(`path`);
 const fs = require(`fs`);
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require(`copy-webpack-plugin`);
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
@@ -37,11 +38,11 @@ module.exports = {
         loader: `babel-loader`,
         exclude: /node_modules/,
       },
-{
+      {
         test: /\.pug$/,
         loader: `pug-loader`,
       },
-{
+      {
         test: /\.scss$/,
         use: [
           `style-loader`,
@@ -68,20 +69,30 @@ module.exports = {
         options: {
           name: '[name].[ext]',
         },
-      }
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
+      },
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
+
     new MiniCssExtractPlugin({
-      // filename: `${PATHS.assets}css/[name].[contenthash].css`,
       filename: `${PATHS.assets}css/[name].[contenthash].css`,
     }),
 
-    // new CopyWebpackPlugin([
-    //   { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-    //   { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
-    //   { from: `${PATHS.src}/static`, to: "" }
-    // ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+        { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+        // { from: `${PATHS.src}/static`, to: "" }
+      ],
+    }),
 
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
