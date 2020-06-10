@@ -5,7 +5,7 @@ html {
   margin: 0;
 
   // typography
-  font-size: 16px;
+  font-size: 10px;
   font-family: 'PT Serif', Times, serif;
 
   // visual
@@ -14,8 +14,6 @@ html {
 
 body {
   // box model
-  width: 1240px;
-  height: 1754px;
   margin: 0 auto;
   padding-top: 4rem;
   padding-left: 4rem;
@@ -23,8 +21,12 @@ body {
 
   // visual
   background-color: $body-background;
-  background-image: url('../assets/img/cert-form.jpg');
-  background-size: contain;
+}
+
+.sheet {
+  // visual
+  background-image: url('../assets/img/cert-form.jpg') !important;
+  background-size: contain !important;
 }
 
 // @page {
@@ -35,15 +37,5 @@ body {
 // }
 
 @page {
-  // size: A4;
-  width: 21cm;
-  height: 29.7cm;
-  margin: 0;
-}
-
-@media print {
-  html, body {
-    width: 210mm;
-    height: 297mm;
-  }
+  size: A4;
 }
