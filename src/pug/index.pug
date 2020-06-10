@@ -10,35 +10,54 @@ html(lang="en")
         header.cert-form__header
           label.cert-form__main-label Добровольная сертификация продукции
           input.cert-form__input.cert-form__input--title(type="text")
+
         section.cert-form__main
-          .cert-form__top
+          .cert-form__top-fields
             .cert-form__number
-              label.cert-form__label №
+              label.cert-form__label.cert-form__label--top №&nbsp;&nbsp;&nbsp;
               input.cert-form__input.cert-form__input--inline(type="text")
             .cert-form__dates
-              label.cert-form__label Срок действия&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;с
+
+              label.cert-form__label.cert-form__label--top Срок действия&nbsp;&nbsp;с&nbsp;&nbsp;&nbsp;
               input.cert-form__input.cert-form__input--inline(type="text")
-              label.cert-form__label &nbsp;&nbsp;&nbsp;&nbsp;по
+
+              label.cert-form__label.cert-form__label--top &nbsp;&nbsp;&nbsp;&nbsp;по&nbsp;&nbsp;&nbsp;
               input.cert-form__input.cert-form__input--inline(type="text")
+
           .cert-form__main-fields
             .cert-form__fullsize
               label.cert-form__label.cert-form__label--caps Орган по сертификации
-              input.cert-form__input(type="text")
-            .cert-form__fullsize
+              textarea.cert-form__textarea.cert-form__textarea--cert(name="", cols="30", rows="5")
+
+            .cert-form__fullsize.cert-form__fullsize--product
               label.cert-form__label.cert-form__label--caps Продукция
-              input.cert-form__input(type="text")
-            .cert-form__fullsize
+              textarea.cert-form__textarea.cert-form__textarea--product(name="", cols="30", rows="6")
+
+            .cert-form__fullsize.cert-form__fullsize--norms
               label.cert-form__label.cert-form__label--caps Соответствует требованиям нормативных документов
-              input.cert-form__input(type="text")
-            .cert-form__fullsize
+              textarea.cert-form__textarea(name="", cols="30", rows="5")
+
+            .cert-form__fullsize.cert-form__fullsize--producer
               label.cert-form__label.cert-form__label--caps Изготовитель
-              input.cert-form__input(type="text")
-            .cert-form__fullsize
+              textarea.cert-form__textarea.cert-form__textarea--producer(name="", cols="30", rows="4")
+
+            .cert-form__fullsize.cert-form__fullsize--given
               label.cert-form__label.cert-form__label--caps Сертификат выдан
-              input.cert-form__input(type="text")
-            .cert-form__fullsize
+              textarea.cert-form__textarea.cert-form__textarea--given(name="", cols="30", rows="4")
+
+            .cert-form__fullsize.cert-form__fullsize--reason
               label.cert-form__label.cert-form__label--caps На основании
-              input.cert-form__input(type="text")
-            .cert-form__fullsize
+              textarea.cert-form__textarea.cert-form__textarea--reason(name="", cols="30", rows="8")
+
+            .cert-form__fullsize.cert-form__fullsize--additional
               label.cert-form__label.cert-form__label--caps Дополнительная информация
-              input.cert-form__input(type="text")
+              textarea.cert-form__textarea.cert-form__textarea--additional(name="", cols="30", rows="4")
+
+          .cert-form__sign-fields
+              .cert-form__sign
+                label.cert-form__label Руководитель органа&nbsp;&nbsp;&nbsp;
+                input.cert-form__input.cert-form__input--sign
+
+              .cert-form__sign
+                label.cert-form__label Эксперт&nbsp;&nbsp;&nbsp;
+                input.cert-form__input.cert-form__input--sign

@@ -11,7 +11,8 @@
 
 .cert-form__header {
   // box model
-  padding: 2rem;
+  padding: 0.2rem 2rem;
+  padding-bottom: 1rem;
 
   // border
   border: 2px solid $black;
@@ -19,7 +20,7 @@
 
 .cert-form__main {
   // box model
-  padding: 2rem;
+  padding: 2rem 1.75rem;
 
   // border
   border: 2px solid $black;
@@ -30,38 +31,173 @@
   display: block;
 
   // typography
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-align: center;
   text-transform: uppercase;
 }
 
-.cert-form__top {
+.cert-form__input--title {
   // box model
-  padding-top: 4rem;
+  width: 100%;
+
+  // typography
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cert-form__top-fields {
+  // box model
+  padding-top: 3.5rem;
   padding-left: 19rem;
+}
+
+.cert-form__number {
+  // box model
+  padding-bottom: 0.5rem;
+}
+
+.cert-form__main-fields {
+  // box model
+  padding-top: 3rem;
 }
 
 .cert-form__input {
   // box model
   display: block;
+
+  &--inline {
+    // box model
+    display: inline-block;
+    width: initial;
+  }
+
+  &--sign {
+    // box model
+    display: inline-block;
+    width: 18rem;
+
+    // typography
+    font-size: 1.25rem;
+  }
 }
 
-.cert-form__input {
-  // box model
-  width: 100%;
-}
-
-.cert-form__input--inline {
-  // box model
-  display: inline-block;
-  width: initial;
-}
 
 .cert-form__label {
   // typography
-  font-size: 1.75rem;
+  font-size: 1.45rem;
+  white-space: nowrap;
+
+  &--top {
+    // typography
+    font-size: 1.75rem;
+  }
+  
+  &--caps {
+    // positioning
+    position: relative;
+    z-index: 2;
+  
+    // typography
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
 }
 
-.cert-form__label--caps {
+
+.cert-form__textarea {
+  // box model
+  width: 100%;
+
+  &--product {
+    // box model
+    margin-top: -2rem;
+
+    // typography
+    text-indent: 11rem;
+  }
+
+  &--producer {
+    // box model
+    margin-top: -2rem;
+
+    // typography
+    text-indent: 14rem;
+  }
+
+  &--given {
+    // box model
+    margin-top: -2rem;
+
+    // typography
+    text-indent: 18rem;
+  }
+
+  &--reason {
+    // box model
+    margin-top: -2rem;
+
+    // typography
+    text-indent: 14rem;
+  }
+
+  &--additional {
+    // box model
+    margin-top: -2rem;
+
+    // typography
+    text-indent: 29rem;
+  }
+}
+
+.cert-form__fullsize {
+  // positioning
+  position: relative;
+
+  &--product {
+    // box model
+    margin-right: 14rem;
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+  }
+
+  &--norms {
+    // box model
+    margin-right: 14rem;
+    margin-bottom: 1.5rem;
+    padding-right: 2rem;
+  }
+
+  &--producer {
+    // box model
+    margin-bottom: 0.5rem;
+  }
+
+  &--given {
+    // box model
+    margin-bottom: 0.25rem;
+  }
+
+  &--reason {
+    // box model
+    margin-bottom: 1rem;
+  }
+}
+
+.cert-form__sign-fields {
+  // box model
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.cert-form__sign {
+  // box model
+  margin-bottom: 1.25rem;
+
   // typography
-  text-transform: uppercase;
+  text-align: right;
 }
