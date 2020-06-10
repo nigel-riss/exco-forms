@@ -3,6 +3,7 @@ const fs = require(`fs`);
 const CopyWebpackPlugin = require(`copy-webpack-plugin`);
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
+const devMode = process.env.NODE_ENV !== 'production';
 
 
 const PATHS = {
@@ -36,16 +37,17 @@ module.exports = {
         loader: `babel-loader`,
         exclude: /node_modules/,
       },
-      {
+{
         test: /\.pug$/,
         loader: `pug-loader`,
       },
-      {
+{
         test: /\.scss$/,
         use: [
           `style-loader`,
-          MiniCssExtractPlugin.loader,
           {
+            loader: MiniCssExtractPlugin.loader,
+          }, {
             loader: `css-loader`,
             options: { sourceMap: true }
           }, {
@@ -57,13 +59,21 @@ module.exports = {
           }, {
             loader: `sass-loader`,
             options: { sourceMap: true },
-          }
+          },
         ],
       },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
+      }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
+      // filename: `${PATHS.assets}css/[name].[contenthash].css`,
       filename: `${PATHS.assets}css/[name].[contenthash].css`,
     }),
 

@@ -1,0 +1,26 @@
+html {
+  // box model
+  padding: 1rem;
+
+  // typography
+  font-size: 16px;
+
+  // visual
+  background-color: $html-background;
+}
+
+body {
+  // box model
+  width: 1240px;
+  height: 1754px;
+  margin: 0 auto;
+
+  // visual
+  background-color: $body-background;
+  background-image: url('../assets/img/cert-form.jpg');
+}
+
+@page {
+  size: auto;
+  margin: 0mm;
+}
