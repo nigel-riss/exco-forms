@@ -5,7 +5,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title ЭКСКО — 
   body.A4
-    section.sheet.padding-10mm
+    section.sheet
       article
         form.cert-form(action="")
           header.cert-form__header
@@ -16,7 +16,7 @@ html(lang="en")
             .cert-form__top-fields
               .cert-form__number
                 label.cert-form__label.cert-form__label--top №&nbsp;&nbsp;&nbsp;
-                input.cert-form__input.cert-form__input--inline(type="text")
+                input.cert-form__input.cert-form__input--number(type="text")
               .cert-form__dates
 
                 label.cert-form__label.cert-form__label--top Срок действия&nbsp;&nbsp;с&nbsp;&nbsp;&nbsp;
@@ -36,7 +36,7 @@ html(lang="en")
 
               .cert-form__fullsize.cert-form__fullsize--norms
                 label.cert-form__label.cert-form__label--caps Соответствует требованиям нормативных документов
-                textarea.cert-form__textarea(name="", cols="30", rows="5")
+                textarea.cert-form__textarea(name="", cols="30", rows="6")
 
               .cert-form__fullsize.cert-form__fullsize--producer
                 label.cert-form__label.cert-form__label--caps Изготовитель
@@ -52,7 +52,7 @@ html(lang="en")
 
               .cert-form__fullsize.cert-form__fullsize--additional
                 label.cert-form__label.cert-form__label--caps Дополнительная информация
-                textarea.cert-form__textarea.cert-form__textarea--additional(name="", cols="30", rows="4")
+                textarea.cert-form__textarea.cert-form__textarea--additional(name="", cols="30", rows="3")
 
               .cert-form__floating.cert-form__floating--ok
                 label.cert-form__label.cert-form__label--caps код ОК
@@ -61,6 +61,9 @@ html(lang="en")
               .cert-form__floating.cert-form__floating--ved
                 label.cert-form__label.cert-form__label--caps код ТН ВЭД
                 textarea.cert-form__textarea.cert-form__textarea--float(name="", cols="30", rows="3")
+
+              .cert-form__floating.cert-form__floating--deputy
+                input.cert-form__input.cert-form__input--deputy(type="text" value="(Заместитель руководителя)")
 
             .cert-form__sign-fields
                 .cert-form__sign
