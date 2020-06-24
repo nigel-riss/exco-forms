@@ -245,7 +245,20 @@
 .cert-form__floating {
   // positioning
   position: absolute;
+  right: -10px;
 
+  // box model
+  width: 140px;
+
+  &--ok {
+    // positioning
+    top: 150px;
+  }
+
+  &--ved {
+    // positioning
+    top: 270px;
+  }
 }
 
 .cert-form__sign-fields {
