@@ -7,6 +7,11 @@
 
   // visual
   opacity: 0.8;
+
+  @media print {
+    // border
+    border: none;
+  }
 }
 
 .cert-form__header {
@@ -16,6 +21,11 @@
 
   // border
   border: 2px solid $black;
+
+  @media print {
+    // border
+    border: none;
+  }
 }
 
 .cert-form__main {
@@ -24,6 +34,11 @@
 
   // border
   border: 2px solid $black;
+
+  @media print {
+    // border
+    border: none;
+  }
 }
 
 .cert-form__main-label {
@@ -36,23 +51,17 @@
   letter-spacing: 0.15em;
   text-align: center;
   text-transform: uppercase;
-}
 
-.cert-form__input--title {
-  // box model
-  width: 100%;
-
-  // typography
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
+  @media print {
+    // typography
+    color: transparent;
+  }
 }
 
 .cert-form__top-fields {
   // box model
-  padding-top: 3.5rem;
-  padding-left: 19rem;
+  padding-top: 3.75rem;
+  padding-left: 20rem;
 }
 
 .cert-form__number {
@@ -61,6 +70,9 @@
 }
 
 .cert-form__main-fields {
+  // positioning
+  position: relative;
+
   // box model
   padding-top: 3rem;
 }
@@ -70,12 +82,23 @@
   display: block;
 
   // typography
-  // font-size: 1.25rem;
+  font-size: 1.2rem;
+
+  &--title {
+    // box model
+    width: 100%;
+  
+    // typography
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
   &--inline {
     // box model
     display: inline-block;
-    width: initial;
+    width: 120px;
   }
 
   &--sign {
@@ -85,6 +108,11 @@
 
     // typography
     font-size: 1.25rem;
+  }
+
+  @media print {
+    // border
+    border: none;
   }
 }
 
@@ -109,12 +137,24 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
+
+  @media print {
+    // typography
+    color: transparent;
+  }
 }
 
 
 .cert-form__textarea {
   // box model
   width: 100%;
+
+  // typography
+  font-size: 1.3rem;
+  line-height: 1.25;
+
+  // visual
+  resize: none;
 
   &--product {
     // box model
@@ -155,23 +195,34 @@
     // typography
     text-indent: 29rem;
   }
+
+  @media print {
+    // border
+    border: none;
+  }
 }
 
 .cert-form__fullsize {
   // positioning
   position: relative;
 
+  &--organ {
+    // box model
+    margin-bottom: 0.75rem;
+  }
+
   &--product {
     // box model
-    margin-right: 14rem;
     margin-bottom: 1rem;
+    margin-right: 14rem;
     padding-right: 2rem;
   }
 
   &--norms {
     // box model
+    margin-top: -0.5rem;
     margin-right: 14rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     padding-right: 2rem;
   }
 
@@ -189,6 +240,12 @@
     // box model
     margin-bottom: 1rem;
   }
+}
+
+.cert-form__floating {
+  // positioning
+  position: absolute;
+
 }
 
 .cert-form__sign-fields {

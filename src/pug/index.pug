@@ -26,9 +26,9 @@ html(lang="en")
                 input.cert-form__input.cert-form__input--inline(type="text")
 
             .cert-form__main-fields
-              .cert-form__fullsize
+              .cert-form__fullsize.cert-form__fullsize--organ
                 label.cert-form__label.cert-form__label--caps Орган по сертификации
-                textarea.cert-form__textarea.cert-form__textarea--cert(name="", cols="30", rows="5")
+                textarea.cert-form__textarea.cert-form__textarea--cert(name="", cols="30", rows="4")
 
               .cert-form__fullsize.cert-form__fullsize--product
                 label.cert-form__label.cert-form__label--caps Продукция
@@ -48,11 +48,19 @@ html(lang="en")
 
               .cert-form__fullsize.cert-form__fullsize--reason
                 label.cert-form__label.cert-form__label--caps На основании
-                textarea.cert-form__textarea.cert-form__textarea--reason(name="", cols="30", rows="8")
+                textarea.cert-form__textarea.cert-form__textarea--reason(name="", cols="30", rows="7")
 
               .cert-form__fullsize.cert-form__fullsize--additional
                 label.cert-form__label.cert-form__label--caps Дополнительная информация
                 textarea.cert-form__textarea.cert-form__textarea--additional(name="", cols="30", rows="4")
+
+              .cert-form__floating.cert-form__floating--ok
+                label.cert-form__label.cert-form__label--caps код ОК
+                textarea.cert-form__textarea.cert-form__textarea--float(name="", cols="30", rows="3")
+
+              .cert-form__floating.cert-form__floating--ok
+                label.cert-form__label.cert-form__label--caps код ТН ВЭД
+                textarea.cert-form__textarea.cert-form__textarea--float(name="", cols="30", rows="3")
 
             .cert-form__sign-fields
                 .cert-form__sign

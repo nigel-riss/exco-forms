@@ -15,9 +15,7 @@ html {
 body {
   // box model
   margin: 0 auto;
-  padding-top: 4rem;
-  padding-left: 4rem;
-  padding-right: 3rem;
+  padding: 4rem;
 
   // visual
   background-color: $body-background;
@@ -27,6 +25,7 @@ body {
   // visual
   background-image: url('../assets/img/cert-form.jpg') !important;
   background-size: contain !important;
+  // background-image: none !important;
 }
 
 // @page {
