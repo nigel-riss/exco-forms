@@ -10,7 +10,8 @@ html(lang="en")
         form.cert-form(action="")
           header.cert-form__header
             label.cert-form__main-label Добровольная сертификация продукции
-            input.cert-form__input.cert-form__input--title(type="text")
+            input.cert-form__input.cert-form__input--title(type="text" value="Система добровольной сертификации «ЭКСКО»")
+            input.cert-form__input.cert-form__input--regnum(type="text" value="Рег. № РОСС RU.32223.04СКЭ0")
 
           section.cert-form__main
             .cert-form__top-fields
@@ -32,7 +33,7 @@ html(lang="en")
 
               .cert-form__fullsize.cert-form__fullsize--product
                 label.cert-form__label.cert-form__label--caps Продукция
-                textarea.cert-form__textarea.cert-form__textarea--product(name="", cols="30", rows="6")
+                textarea.cert-form__textarea.cert-form__textarea--product(name="", cols="30", rows="7")
 
               .cert-form__fullsize.cert-form__fullsize--norms
                 label.cert-form__label.cert-form__label--caps Соответствует требованиям нормативных документов
@@ -48,11 +49,11 @@ html(lang="en")
 
               .cert-form__fullsize.cert-form__fullsize--reason
                 label.cert-form__label.cert-form__label--caps На основании
-                textarea.cert-form__textarea.cert-form__textarea--reason(name="", cols="30", rows="7")
+                textarea.cert-form__textarea.cert-form__textarea--reason(name="", cols="30", rows="8")
 
               .cert-form__fullsize.cert-form__fullsize--additional
                 label.cert-form__label.cert-form__label--caps Дополнительная информация
-                textarea.cert-form__textarea.cert-form__textarea--additional(name="", cols="30", rows="3")
+                textarea.cert-form__textarea.cert-form__textarea--additional(name="", cols="30", rows="4")
 
               .cert-form__floating.cert-form__floating--ok
                 label.cert-form__label.cert-form__label--caps код ОК

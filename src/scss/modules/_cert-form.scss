@@ -18,7 +18,7 @@
   // box model
   padding: 0.2rem 2rem;
   padding-right: 5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 4rem;
 
   // border
   border: 2px solid $black;
@@ -51,6 +51,7 @@
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.15em;
+  line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
 
@@ -62,7 +63,7 @@
 
 .cert-form__top-fields {
   // box model
-  padding-top: 5rem;
+  padding-top: 0rem;
   padding-left: 23rem;
 }
 
@@ -93,8 +94,20 @@
     // typography
     font-size: 2rem;
     font-weight: 700;
+    line-height: 1;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  &--regnum {
+    // box model
+    width: 100%;
+  
+    // typography
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
   }
 
   &--inline {
@@ -169,14 +182,14 @@
 
   // typography
   font-size: 1.4rem;
-  line-height: 1.25;
+  line-height: 1.2;
 
   // visual
   resize: none;
 
   &--product {
     // box model
-    margin-top: -2rem;
+    margin-top: -1.5rem;
 
     // typography
     text-indent: 12rem;
@@ -209,7 +222,6 @@
   &--additional {
     // box model
     margin-top: -2rem;
-    margin-bottom: 1rem;
 
     // typography
     text-indent: 32rem;
@@ -232,7 +244,7 @@
 
   &--product {
     // box model
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     margin-right: 16rem;
     padding-right: 2rem;
   }
@@ -242,6 +254,7 @@
     margin-top: -0.5rem;
     margin-right: 16rem;
     padding-right: 2rem;
+    margin-bottom: 1rem;
   }
 
   &--producer {
@@ -288,7 +301,7 @@
 
 .cert-form__sign-fields {
   // box model
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
