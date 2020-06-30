@@ -51,7 +51,7 @@
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  line-height: 1.2;
+  line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
 
@@ -63,7 +63,7 @@
 
 .cert-form__top-fields {
   // box model
-  padding-top: 0rem;
+  padding-top: 1rem;
   padding-left: 23rem;
 }
 
@@ -77,7 +77,7 @@
   position: relative;
 
   // box model
-  padding-top: 4rem;
+  padding-top: 3.25rem;
 }
 
 .cert-form__input {
@@ -276,26 +276,26 @@
 .cert-form__floating {
   // positioning
   position: absolute;
-  right: -10px;
+  right: 0px;
 
   // box model
   width: 150px;
 
   &--ok {
     // positioning
-    top: 170px;
+    top: 160px;
   }
 
   &--ved {
     // positioning
-    top: 290px;
+    top: 275px;
   }
 
   &--deputy {
     // positioning
-    bottom: -65px;
+    bottom: -55px;
     right: auto;
-    left: 150px;
+    left: 145px;
   }
 }
 
