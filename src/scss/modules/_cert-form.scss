@@ -137,7 +137,9 @@
     width: 200px;
 
     // typography
+    font-size: 1.25rem;
     text-decoration: underline;
+    text-decoration-skip-ink: none;
   }
 
   @media print {
@@ -294,9 +296,9 @@
 
   &--deputy {
     // positioning
-    bottom: -52px;
+    bottom: -42px;
     right: auto;
-    left: 145px;
+    left: 140px;
   }
 }
 
