@@ -224,6 +224,7 @@
     margin-top: -2rem;
 
     // typography
+    font-size: 1.25rem;
     text-indent: 32rem;
   }
 
@@ -293,7 +294,7 @@
 
   &--deputy {
     // positioning
-    bottom: -55px;
+    bottom: -52px;
     right: auto;
     left: 145px;
   }
@@ -301,13 +302,13 @@
 
 .cert-form__sign-fields {
   // box model
-  padding-top: 0.5rem;
+  // padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
 .cert-form__sign {
   // box model
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 
   // typography
   text-align: right;
