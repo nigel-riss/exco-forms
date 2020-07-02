@@ -1,9 +1,8 @@
-// const webpack = require('webpack');
-const merge = require('webpack-merge');
-const baseWebpackConfig = require('./webpack.base.config');
+const merge = require(`webpack-merge`);
+const baseWebpackConfig = require(`./webpack.base.config.js`);
 
 
-const devWebpackConfig = merge(baseWebpackConfig, {
+const devWebpackConfig = merge(baseWebpackConfig,{
   mode: `development`,
   devServer: {
     contentBase: baseWebpackConfig.externals.paths.public,
@@ -12,7 +11,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       warnings: true,
       errors: true,
     },
-    // watchContentBase: true,
+  },
+  module: {
+    rules: [],
   },
 });
 
