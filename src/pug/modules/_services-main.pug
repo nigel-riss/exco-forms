@@ -1,0 +1,69 @@
+section#services-main.sheet.print-sheet
+  article
+    form.cert-form(action="")
+      header.cert-form__header
+        label.cert-form__main-label Добровольная сертификация услуг
+        input.cert-form__input.cert-form__input--title(type="text" value="Система добровольной сертификации «ЭКСКО»")
+        input.cert-form__input.cert-form__input--regnum(type="text" value="Рег. № РОСС RU.32223.04СКЭ0")
+
+      section.cert-form__main
+        .cert-form__top-fields
+          .cert-form__number
+            label.cert-form__label.cert-form__label--top №&nbsp;&nbsp;&nbsp;
+            input.cert-form__input.cert-form__input--number(type="text")
+          .cert-form__dates
+
+            label.cert-form__label.cert-form__label--top Срок действия&nbsp;&nbsp;с&nbsp;&nbsp;&nbsp;
+            input.cert-form__input.cert-form__input--inline(type="text")
+
+            label.cert-form__label.cert-form__label--top &nbsp;&nbsp;&nbsp;&nbsp;по&nbsp;&nbsp;&nbsp;
+            input.cert-form__input.cert-form__input--inline(type="text")
+
+        .cert-form__main-fields
+          .cert-form__fullsize.cert-form__fullsize--organ
+            label.cert-form__label.cert-form__label--caps Орган по сертификации
+            textarea.cert-form__textarea.cert-form__textarea--cert(name="", cols="30", rows="4")
+
+          .cert-form__fullsize.cert-form__fullsize--product
+            label.cert-form__label.cert-form__label--caps Продукция
+            textarea.cert-form__textarea.cert-form__textarea--product(name="", cols="30", rows="7")
+
+          .cert-form__fullsize.cert-form__fullsize--norms
+            label.cert-form__label.cert-form__label--caps Соответствует требованиям нормативных документов
+            textarea.cert-form__textarea(name="", cols="30", rows="6")
+
+          .cert-form__fullsize.cert-form__fullsize--producer
+            label.cert-form__label.cert-form__label--caps Изготовитель
+            textarea.cert-form__textarea.cert-form__textarea--producer(name="", cols="30", rows="4")
+
+          .cert-form__fullsize.cert-form__fullsize--given
+            label.cert-form__label.cert-form__label--caps Сертификат выдан
+            textarea.cert-form__textarea.cert-form__textarea--given(name="", cols="30", rows="4")
+
+          .cert-form__fullsize.cert-form__fullsize--reason
+            label.cert-form__label.cert-form__label--caps На основании
+            textarea.cert-form__textarea.cert-form__textarea--reason(name="", cols="30", rows="8")
+
+          .cert-form__fullsize.cert-form__fullsize--additional
+            label.cert-form__label.cert-form__label--caps Дополнительная информация
+            textarea.cert-form__textarea.cert-form__textarea--additional(name="", cols="30", rows="5")
+
+          .cert-form__floating.cert-form__floating--ok
+            label.cert-form__label.cert-form__label--caps код ОК
+            textarea.cert-form__textarea.cert-form__textarea--float(name="", cols="30", rows="3")
+
+          .cert-form__floating.cert-form__floating--ved
+            label.cert-form__label.cert-form__label--caps код ТН ВЭД
+            textarea.cert-form__textarea.cert-form__textarea--float(name="", cols="30", rows="3")
+
+          .cert-form__floating.cert-form__floating--deputy
+            input.cert-form__input.cert-form__input--deputy(type="text" value="(Заместитель руководителя)")
+
+        .cert-form__sign-fields
+            .cert-form__sign
+              label.cert-form__label Руководитель органа&nbsp;&nbsp;&nbsp;
+              input.cert-form__input.cert-form__input--sign
+
+            .cert-form__sign
+              label.cert-form__label Эксперт&nbsp;&nbsp;&nbsp;
+              input.cert-form__input.cert-form__input--sign

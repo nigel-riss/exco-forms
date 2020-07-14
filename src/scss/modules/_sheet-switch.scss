@@ -1,0 +1,42 @@
+.sheet-switch {
+  // box model
+  display: flex;
+  justify-content: center;
+
+  @media print {
+    // box model
+    display: none;
+  }
+}
+
+.sheet-switch__tab {
+  // box model
+  padding: 10px 20px;
+}
+
+.sheet-switch__link {
+  // box model
+  padding: 5px 20px;
+
+  // typography
+  color: #000;
+  font-family: sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+
+  // visual
+  background-color: #fff;
+
+  &:hover {
+    // visual
+    background-color: #ccc;
+  }
+}
+
+.sheet-switch__link--current {
+  // typography
+  color: #fff;
+
+  // visual
+  background-color: #000;
+}
