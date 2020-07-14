@@ -1,4 +1,7 @@
 import './scss/style.scss';
 import 'paper-css/paper.css';
 
-import Switch from './js/modules/_switch.js';
+import TabSwitch from './js/modules/_switch.js';
+
+
+const tabSwitch = new TabSwitch();
