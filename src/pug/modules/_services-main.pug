@@ -56,14 +56,5 @@ section#services-main.sheet.print-sheet
             label.cert-form__label.cert-form__label--caps код ТН ВЭД
             textarea.cert-form__textarea.cert-form__textarea--float(name="", cols="30", rows="3")
 
-          .cert-form__floating.cert-form__floating--deputy
-            input.cert-form__input.cert-form__input--deputy(type="text" value="(Заместитель руководителя)")
+      include ./__sign-fields.pug
 
-        .cert-form__sign-fields
-            .cert-form__sign
-              label.cert-form__label Руководитель органа&nbsp;&nbsp;&nbsp;
-              input.cert-form__input.cert-form__input--sign
-
-            .cert-form__sign
-              label.cert-form__label Эксперт&nbsp;&nbsp;&nbsp;
-              input.cert-form__input.cert-form__input--sign

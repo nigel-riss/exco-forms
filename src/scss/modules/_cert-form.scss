@@ -1,4 +1,11 @@
 .cert-form {
+  // positioning
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
   // box model
   padding: 0.5rem;
 
@@ -36,6 +43,7 @@
 
   // border
   border: 2px solid $black;
+  border-bottom: none;
 
   @media print {
     // border
@@ -280,6 +288,7 @@
   // positioning
   position: absolute;
   right: 0px;
+  bottom: 0;
 
   // box model
   width: 150px;
@@ -296,16 +305,21 @@
 
   &--deputy {
     // positioning
-    bottom: -42px;
+    top: 18px;
     right: auto;
-    left: 140px;
+    left: 166px;
   }
 }
 
 .cert-form__sign-fields {
+  // positioning
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+
   // box model
-  // padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-right: 6rem;
+  width: 100%;
 }
 
 .cert-form__sign {
