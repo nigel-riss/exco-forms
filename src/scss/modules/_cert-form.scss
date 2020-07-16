@@ -77,8 +77,8 @@
 
 .cert-form__top-fields-2 {
   // box model
-  padding-top: 1rem;
-  padding-left: 35rem;
+  padding-top: 2rem;
+  padding-left: 38rem;
 }
 
 .cert-form__number {
@@ -313,7 +313,7 @@
     // positioning
     top: 18px;
     right: auto;
-    left: 166px;
+    left: 172px;
   }
 }
 
@@ -326,6 +326,11 @@
   // box model
   padding-right: 6rem;
   width: 100%;
+
+  @media print {
+    // positioning
+    bottom: 50px;
+  }
 }
 
 .cert-form__sign {
