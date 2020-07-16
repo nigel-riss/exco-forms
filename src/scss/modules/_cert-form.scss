@@ -211,6 +211,22 @@
     text-indent: 12rem;
   }
 
+  &--service {
+    // box model
+    margin-top: -2rem;
+
+    // typography
+    text-indent: 16rem;
+  }
+
+  &--code {
+    // box model
+    margin-top: -2rem;
+
+    // typography
+    text-indent: 5rem;
+  }
+
   &--producer {
     // box model
     margin-top: -2rem;
@@ -311,7 +327,7 @@
 
   &--deputy {
     // positioning
-    top: 18px;
+    top: 22px;
     right: auto;
     left: 172px;
   }

@@ -31,6 +31,10 @@
     // visual
     background-color: #ccc;
   }
+
+  &.red {
+    border: 2px dashed red;
+  }
 }
 
 .sheet-switch__link--current {

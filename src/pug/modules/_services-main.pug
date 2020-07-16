@@ -1,4 +1,4 @@
-section#services-main.sheet.print-sheet.print-sheet--shown
+section#services-main.sheet.print-sheet
   article
     form.cert-form(action="")
       header.cert-form__header
@@ -22,31 +22,31 @@ section#services-main.sheet.print-sheet.print-sheet--shown
         .cert-form__main-fields
           .cert-form__fullsize.cert-form__fullsize--organ
             label.cert-form__label.cert-form__label--caps Орган по сертификации
-            textarea.cert-form__textarea.cert-form__textarea--cert(name="", cols="30", rows="4")
+            textarea.cert-form__textarea.cert-form__textarea--cert(name="", cols="30", rows="5")
 
           .cert-form__fullsize.cert-form__fullsize--service
             label.cert-form__label.cert-form__label--caps Услуга (Работа)
-            textarea.cert-form__textarea.cert-form__textarea--product(name="", cols="30", rows="7")
+            textarea.cert-form__textarea.cert-form__textarea--service(name="", cols="30", rows="7")
 
           .cert-form__fullsize.cert-form__fullsize--code
             label.cert-form__label.cert-form__label--caps Код
-            textarea.cert-form__textarea.cert-form__textarea--product(name="", cols="30", rows="1")
+            textarea.cert-form__textarea.cert-form__textarea--code(name="", cols="30", rows="2")
 
           .cert-form__fullsize.cert-form__fullsize--norms-2
             label.cert-form__label.cert-form__label--caps Соответствует требованиям нормативных документов
-            textarea.cert-form__textarea(name="", cols="30", rows="6")
+            textarea.cert-form__textarea(name="", cols="30", rows="11")
 
           .cert-form__fullsize.cert-form__fullsize--producer
             label.cert-form__label.cert-form__label--caps Исполнитель
-            textarea.cert-form__textarea.cert-form__textarea--producer(name="", cols="30", rows="4")
+            textarea.cert-form__textarea.cert-form__textarea--producer(name="", cols="30", rows="6")
 
           .cert-form__fullsize.cert-form__fullsize--reason
             label.cert-form__label.cert-form__label--caps На основании
             textarea.cert-form__textarea.cert-form__textarea--reason(name="", cols="30", rows="8")
 
-          .cert-form__fullsize.cert-form__fullsize--additional
-            label.cert-form__label.cert-form__label--caps Дополнительная информация
-            textarea.cert-form__textarea.cert-form__textarea--additional(name="", cols="30", rows="5")
+          //- .cert-form__fullsize.cert-form__fullsize--additional
+          //-   label.cert-form__label.cert-form__label--caps Дополнительная информация
+          //-   textarea.cert-form__textarea.cert-form__textarea--additional(name="", cols="30", rows="5")
 
       include ./__sign-fields.pug
 
